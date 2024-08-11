@@ -1,9 +1,8 @@
 function isMaleName(name) {
-  if (name.endsWith("a")) {
-    if (name.toLowerCase() === "bonawentura") {
-      return true;
-    }
-  } else {
+  const formatedName = name.toLowerCase();
+  if (formatedName === "bonawentura") {
+    return true;
+  } else if (formatedName.endsWith("a")) {
     return false;
   }
 }
@@ -11,3 +10,4 @@ function isMaleName(name) {
 const result1 = isMaleName("Ala");
 const result2 = isMaleName("Jacek");
 const result3 = isMaleName("Bonawentura");
+console.log(result1, result2, result3);
